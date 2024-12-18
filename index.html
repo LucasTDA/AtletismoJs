@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Atletas</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gerenciamento de Atletas</h1>
+
+        <!-- Formulário para adicionar atletas -->
+        <form id="formAtleta">
+            <h2>Adicionar Atleta</h2>
+            <label for="nome">Nome do Atleta:</label>
+            <input type="text" id="nome" required>
+
+            <label for="pais">País (México, Canadá ou USA):</label>
+            <select id="pais" required>
+                <option value="">Selecione</option>
+                <option value="MEXICO">México</option>
+                <option value="CANADA">Canadá</option>
+                <option value="USA">USA</option>
+            </select>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" required>
+                <option value="">Selecione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+
+            <label for="tempoClassif">Tempo de Classificação (8.0 a 25.5):</label>
+            <input type="number" id="tempoClassif" min="8.0" max="25.5" step="0.1" required>
+
+            <label for="tempoFinal">Tempo Final (8.0 a 25.5):</label>
+            <input type="number" id="tempoFinal" min="8.0" max="25.5" step="0.1" required>
+
+            <button type="submit">Adicionar Atleta</button>
+        </form>
+
+        <!-- Consultas -->
+        <form id="formConsulta">
+            <h2>Consultar Atletas</h2>
+            <label for="consultaPais">País:</label>
+            <select id="consultaPais">
+                <option value="">Selecione</option>
+                <option value="MEXICO">México</option>
+                <option value="CANADA">Canadá</option>
+                <option value="USA">USA</option>
+            </select>
+            <button type="button" id="btnConsultar">Consultar por País</button>
+        </form>
+
+        <!-- Botões adicionais -->
+        <div>
+            <button type="button" id="btnMediaTempos">Visualizar Média de Tempos</button>
+            <button type="button" id="btnMelhorTempo">Visualizar Melhor Tempo</button>
+        </div>
+
+        <!-- Resultados -->
+        <div class="results" id="resultados">
+            <h2>Resultados:</h2>
+            <p>Nenhuma consulta realizada ainda.</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
